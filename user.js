@@ -1,6 +1,7 @@
 const express = require('express')
+var bodyParser = require('body-parser')
 const router = express.Router()
-
+var jsonParser = bodyParser.json()
 const data =require('../model/data')
 
 router.get('/',async(req,res) => {
@@ -14,12 +15,11 @@ router.get('/',async(req,res) => {
     }
 })
 
-router.post('/',async(req,res) => {
+router.post('/',jsonParser,async(req,res) => {
 
-    console.log(req)
- 
+        console.log(req.body)
     const user = new data({
-        name: req.body.name,
+        username: req.body.name,
         email: req.body.email,
         password: req.body.password
     })
