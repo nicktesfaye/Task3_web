@@ -31,8 +31,6 @@ router.post('/',jsonParser,async(req,res) => {
 
     try{
         const a1= await data.findOne({email: user.email})
-        const a2= await data.findOne({email: user.password})
-        a2=await data.findOne({email: user.name})
         if(a1==null)
         {await user.save()
         res.redirect('/login')}
