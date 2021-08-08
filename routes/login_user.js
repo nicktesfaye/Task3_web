@@ -18,6 +18,8 @@ router.post('/',jsonParser,async(req,res) => {
         const a1= await data.findOne({email: req.body.email})
         if(await bcrypt.compare(req.body.password,a1.password))
         {   req.session.LogIn = true
+            req.session.userName = a1.name
+            req.session.userEmail = a1.email
             res.redirect('/')}
         else
         {console.log("incorrect password")
