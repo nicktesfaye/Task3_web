@@ -13,7 +13,11 @@ con.on('open',() =>{
 
 const user =require('./routes/user')
 const login_user = require('./routes/login_user')
-const data = require('./model/data')
+const createTeam = require('./routes/createTeam')
+const newTeam = require('./routes/newTeam')
+const joinTeam = require('./routes/joinTeam')
+const createPoll = require('./routes/createPoll')
+const newPoll = require('./routes/newPoll')
 
 
 app.set('view-engine','ejs')
@@ -44,6 +48,7 @@ app.post('/',(req,res)=>{
 })
 
 app.get('/login',(req,res)=>{
+    req.session.LogIn=false
 res.render('login.ejs')
 })
 
@@ -54,6 +59,11 @@ res.render('register.ejs')
 
 app.use('/users',user)
 app.use('/logData',login_user)
+app.use('/createTeam',createTeam)
+app.use('/newTeam',newTeam)
+app.use('/joinTeam',joinTeam)
+app.use('/createPoll',createPoll)
+app.use('/newPoll',newPoll)
 
 app.listen(3000, ()=>{
     console.log('server started')
