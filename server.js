@@ -18,7 +18,10 @@ const newTeam = require('./routes/newTeam')
 const joinTeam = require('./routes/joinTeam')
 const createPoll = require('./routes/createPoll')
 const newPoll = require('./routes/newPoll')
-
+const invite = require('./routes/invite')
+const invited = require('./routes/invited')
+const accept = require('./routes/accept')
+const decline = require('./routes/decline')
 
 app.set('view-engine','ejs')
 app.use(express.urlencoded({extended:false}))
@@ -64,6 +67,10 @@ app.use('/newTeam',newTeam)
 app.use('/joinTeam',joinTeam)
 app.use('/createPoll',createPoll)
 app.use('/newPoll',newPoll)
+app.use('/invite',invite)
+app.use('/invited',invited)
+app.use('/accept',accept)
+app.use('/decline',decline)
 
 app.listen(3000, ()=>{
     console.log('server started')
