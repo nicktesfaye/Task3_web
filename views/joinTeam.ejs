@@ -1,1 +1,21 @@
-<h1>click here to joinTeam</h1>
+<link href="joinTeam.css" rel="stylesheet" type="text/css">
+
+<div class="parent">
+    <h1>accept or decline to view next</h1>
+    
+    <h2> invite from <%= name%></h2>
+    
+    <form action="/accept" method="POST">
+    
+        <button class ="btn" type="submit">accept</button>
+    
+    </form>
+
+    <form action="/decline" method="POST">
+    
+        <button class ="btn" type="submit">decline</button>
+    
+    </form>
+    
+    
+    </div>
