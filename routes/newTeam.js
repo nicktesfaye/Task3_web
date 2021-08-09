@@ -33,11 +33,15 @@ router.post('/',jsonParser,async(req,res) => {
         const a1= await team.findOne({team: user.team})
         if(a1==null)
         {
-        await user.save()
-        
         const temp = await data.findOne({email: user.adminEmail})
+        if(temp.team == "none")
+        {await user.save()
         temp.team = user.team
-        temp.save()
+        temp.save()}
+
+        else{
+            res.redirect('/createTeam')
+        }
         
         res.redirect('/')}
         else
