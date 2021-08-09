@@ -15,6 +15,12 @@ const schema = new mongoose.Schema({
     password:{
         type: String,
         required: true
+    },
+
+    team:{
+        type:String,
+        required:true,
+        default:"none"
     }
 
 })
