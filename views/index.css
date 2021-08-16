@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: lightblue;
+  margin: 0;
+}
+
+.parent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  top: 20%;
+}
+
+.btn {
+  font-size: 20px;
+  position: relative;
+  display: grid;
+  top: 30px;
+  color: royalblue;
+}
+
+.button {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 20px;
+  grid-template-rows: 20px 20px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.text {
+  font-size: 50px;
+  color: royalblue;
+}
+
+.text1 {
+  position: relative;
+  font-size: 30px;
+  color: black;
+  top: 20px;
+  padding-bottom: 20px;
+}

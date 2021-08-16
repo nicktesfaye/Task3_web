@@ -1,0 +1,59 @@
+<link href="vote.css" rel="stylesheet" type="text/css">
+
+  <div class="wrapper">
+    <header><%=question %></header>
+    
+    <div class="poll-area">
+
+      <form action="/voted" method="POST">
+      
+      <input type="radio" name="Option" id="opt-1" value="1">
+      <input type="radio" name="Option" id="opt-2" value="2">
+      <input type="radio" name="Option" id="opt-3" value="3">
+      <input type="radio" name="Option" id="opt-4" value="4">
+      
+      <label for="opt-1" class="opt-1">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option1%></span>
+          </div></div>
+      </label>
+      
+      <label for="opt-2" class="opt-2">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option2%></span>
+          </div></div>
+      </label>
+      
+      <label for="opt-3" class="opt-3">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option3%></span>
+          </div></div>
+      </label>
+      
+      <label for="opt-4" class="opt-4">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option4%></span>
+          </div></div>
+      </label>
+
+  <input class ="submit" type="submit">
+    </form>
+
+    </div>
+  </div>
+
+  
+
+  <a class="link" href="/">back</a>
+
+  <script src="vote.js"></script>
+
+  

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: lightgray;
+  margin: 0;
+}
+
+.parent {
+  font-size: 20px;
+  color: forestgreen;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  top: 20%;
+}
+
+.btn {
+  color: black;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+}
+
+.link {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  top: 20px;
+  color: black;
+}
+.text {
+  font-size: 50px;
+  color: black;
+}

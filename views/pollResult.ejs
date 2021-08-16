@@ -1,0 +1,57 @@
+<link href="pollResult.css" rel="stylesheet" type="text/css">
+
+  <div class="wrapper">
+    <header><%=question %></header>
+    
+    <div class="poll-area">
+
+      <form action="/voted" method="POST">
+      
+      <div name="Option" id="opt-1" ></div>
+      <div name="Option" id="opt-2" ></div>
+      <div name="Option" id="opt-3" ></div>
+      <div name="Option" id="opt-4" ></div>
+      
+      <label for="opt-1" class="opt-1">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option1%> &#160 &#160 &#160 &#160 &#160 &#160 <%= votes1%>  votes</span>
+          </div></div>
+      </label>
+      
+      <label for="opt-2" class="opt-2">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option2%> &#160 &#160 &#160 &#160 &#160 &#160  <%= votes2%>  votes</span>
+          </div></div>
+      </label>
+      
+      <label for="opt-3" class="opt-3">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option3%> &#160 &#160 &#160 &#160 &#160 &#160  <%= votes3%>  votes</span>
+          </div></div>
+      </label>
+      
+      <label for="opt-4" class="opt-4">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text"><%=option4%> &#160 &#160 &#160 &#160 &#160 &#160  <%= votes4%>  votes</span>
+          </div></div>
+      </label>
+
+    </form>
+
+    </div>
+  </div>
+
+  
+
+  <a class="link" href="/">back</a>
+
+
+  

@@ -1,0 +1,47 @@
+<link href="index.css" rel="stylesheet" type="text/css">
+
+
+<div class="parent">
+<div class="text">Home Page</div>
+<div class="text1"><%= team %></div>
+
+<div class="buttons">
+<form action="/createTeam" method="POST">
+<button class='btn' type="submit">Create Team</button>
+</form>
+
+<form action="/joinTeam" method="POST">
+    <button class='btn' type="submit">View Invites</button>
+    </form>
+
+<form action="/invite" method="POST">
+        <button class='btn' type="submit">Invite</button>
+        </form>
+
+<form action="/createPoll" method="POST">
+    <button class='btn' type="submit">Create Poll</button>
+     </form>
+
+<form action="/vote" method="POST">
+        <button class='btn' type="submit">vote</button>
+         </form>
+
+<form action="/result" method="POST">
+        <button class='btn' type="submit">Poll result</button>
+            </form>
+
+<form action="/endPoll" method="POST">
+        <button class='btn' type="submit">End Poll</button>
+            </form>
+
+
+
+<form action="/" method="POST">
+<button class='btn' type="submit">Log out</button>
+
+</div>
+</form>
+
+
+
+</div>
